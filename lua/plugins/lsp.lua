@@ -27,7 +27,7 @@ return {
 
 	-- Format on save for Go files 
 	vim.api.nvim_create_autocmd("BufWritePre", {
-	    pattern = "*.go", 
+	    pattern = {"*.go", "*.c", "*.cpp", "*h"}, 
 	    callback = function ()
 		vim.lsp.buf.format({ async = false })
 	    end, 
